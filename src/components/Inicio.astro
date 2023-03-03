@@ -1,8 +1,8 @@
-<div id="inicio" class="bg-black">
+<div id="inicio" class="">
     <div
-        class="w-full py-20 h-screen px-4 lg:px-12 lg:flex lg:justify-center text-center lg:text-left"
+        class="w-full py-20 h-screen px-4 lg:px-12 lg:flex lg:justify-center text-center lg:text-left pt-40"
     >
-        <div class="lg:w-6/12 lg:pt-32 lg:pl-24">
+        <div class="lg:w-6/12 lg:pt-14 lg:pl-24 text-center">
             <h1 class="text-4xl font-extrabold text-white sm:text-5xl">
                 <span class="block"> DACAR</span>
             </h1>
@@ -10,20 +10,30 @@
                 <span class="block"> Enmarcado a la medida</span>
             </h2>
 
-            <p class="text-xl mt-4 text-gray-300">
-                Ofrecemos servicios de enmarcado personalizado para todo tipo de
-                cuadros y obras de arte. Nos enorgullecemos de ofrecer un
-                servicio de alta calidad y atención al cliente excepcional, para
-                asegurarnos de que cada cliente obtenga el marco perfecto para
-                su pieza única.
+            <p class="text-md mt-4 text-gray-300 lg:text-xl">
+                Ofrecemos enmarcado personalizado de alta calidad para cuadros y
+                obras de arte, con atención al cliente excepcional.
             </p>
-        </div>
-        <div class="lg:w-6/12 lg:pt-32">
             <img
-                src="https://scontent.fcuu2-1.fna.fbcdn.net/v/t39.30808-6/334193765_490922523066487_2849069953103010523_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHGJ0tGfzM15qi9B4T8nwq-FuP7oWbZb-AW4_uhZtlv4LG3ZDOjdBqQv37XmccM3ypuBCrPkJY_hhCm3EonDM-9&_nc_ohc=J61BlUoyBHIAX-07bXs&_nc_ht=scontent.fcuu2-1.fna&oh=00_AfCDIRlOV_myrxrOJ8nXOWrf-vRgn93iuprm9_aYMogbTw&oe=640444FE"
-                alt="logo"
-                class="lg:w-56 w-8/12 rounded-md pt-12 m-auto"
+                src="https://scontent.fcuu2-1.fna.fbcdn.net/v/t39.30808-6/306970657_624064505857405_6402953742916148525_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ul8J3tJU8WwAX9adogT&_nc_ht=scontent.fcuu2-1.fna&oh=00_AfBEgSlAwjVjjyHBhyW2IDlqgE0VDBGHNOLKMT1h-NcMJg&oe=64073316"
+                alt=""
+                class="lg:w-7/12 w-9/12 pt-8 rounded-md m-auto"
             />
         </div>
     </div>
 </div>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+        });
+    });
+
+    const container = document.querySelectorAll(".hidden");
+    container.forEach((el) => observer.observe(el));
+</script>

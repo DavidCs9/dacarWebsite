@@ -8,7 +8,7 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	<>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -16,15 +16,19 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<meta
 			name="description"
-			content="Bienvenido a nuestro negocio de enmarcado a medida, donde ofrecemos servicios de enmarcado personalizado para todo tipo de cuadros y obras de arte. Nos enorgullecemos de ofrecer un servicio de alta calidad y atención al cliente excepcional, para asegurarnos de que cada cliente obtenga el marco perfecto para su pieza única."
+			content="Bienvenido a nuestro negocio de enmarcado a medida, donde ofrecemos servicios de enmarcado personalizado 
+			para todo tipo de cuadros y obras de arte. Nos enorgullecemos de ofrecer un servicio de alta calidad y atención al 
+			cliente excepcional, para asegurarnos de que cada cliente obtenga el marco perfecto para su pieza única."
 		/>
 		<script
 			defer
 			src="https://kit.fontawesome.com/a654d59b05.js"
 			crossorigin="anonymous"
 		></script>
-	</head>
+		<link rel="stylesheet" href="src/styles/styles.css" />
+	</>
 	<body>
 		<slot />
+		<script defer src="src/js/animation.js"></script>
 	</body>
 </html>
