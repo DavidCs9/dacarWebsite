@@ -1,4 +1,4 @@
-<div id="inicio" class="">
+<div id="inicio">
     <div
         class="w-full py-20 h-screen px-4 lg:px-12 lg:flex lg:justify-center text-center lg:text-left pt-40"
     >
@@ -21,19 +21,19 @@
             />
         </div>
     </div>
-</div>
-
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            } else {
-                entry.target.classList.remove("show");
-            }
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log("soy el script de inicio");
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                } else {
+                    entry.target.classList.remove("show");
+                }
+            });
         });
-    });
 
-    const container = document.querySelectorAll(".hidden");
-    container.forEach((el) => observer.observe(el));
-</script>
+        const container = document.querySelectorAll(".hidden");
+        container.forEach((el) => observer.observe(el));
+    </script>
+</div>

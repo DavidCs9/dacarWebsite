@@ -2,39 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Inicio from "../components/Inicio.astro";
-import Productos from "../components/Productos.astro";
-import Contacto from "../components/Contacto.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="DACAR enmarcado a la medida">
 	<main>
 		<Nav />
 		<Inicio />
-		<Productos />
-		<Contacto />
-		<footer class="text-center text-white text-opacity-30 pb-3">
-			Diseñado y creado por
-			<a class="text-slate-400" href="https://www.davidcastro.tech/"
-				>David Castro</a
-			>
-		</footer>
+		<Footer />
 	</main>
 </Layout>
-
-<style>
-	body {
-		background: #0f2027;
-		/* fallback for old browsers */
-		background: -webkit-linear-gradient(
-			to right,
-			#2c5364,
-			#203a43,
-			#0f2027
-		);
-		/* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-		color: white;
-	}
-</style>
