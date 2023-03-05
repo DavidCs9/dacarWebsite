@@ -4,42 +4,56 @@
             Productos disponibles
         </h2>
         <ul class="list-disc mt-5 lg:text-2xl lg:w-4/5 lg:m-auto">
-            <li class="hola pt-2 lg:pt-8">
+            <li id="p1" class="pt-2 lg:pt-8">
                 <strong> Marcos a la medida</strong> - Ofrecemos una amplia variedad
                 de opciones de marcos, incluyendo diferentes estilos, colores y materiales.
                 Cada marco se personaliza para adaptarse perfectamente a su obra
                 de arte.
             </li>
-            <li class="hola pt-2 lg:pt-8">
+            <li id="p2" class="pt-2 lg:pt-8">
                 <strong> Bastidores a la medida</strong> - Si tienes una pintura
                 en lienzo o cualquier otro tipo de pieza que requiere un bastidor,
                 ofrecemos opciones personalizadas para adaptarse a tus necesidades.
             </li>
-            <li class="hola pt-2 lg:pt-8">
+            <li id="p3" class="pt-2 lg:pt-8">
                 <strong> Espejos</strong> - Además de enmarcar obras de arte, también
                 ofrecemos servicios de enmarcado para espejos. Ofrecemos una variedad
                 de estilos y opciones de marco para adaptarse a cualquier decoración.
             </li>
-            <li class="hola pt-2 lg:pt-8">
+            <li id="p4" class="pt-2 lg:pt-8">
                 <strong> Montaje de oleos</strong> - Si tienes una pintura al óleo
                 que requiere un enmarcado personalizado, podemos ayudarte. Nos aseguraremos
                 de que la pintura se conserve y se exhiba adecuadamente.
             </li>
         </ul>
     </div>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                console.log("soy el script de producto");
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                } else {
-                    entry.target.classList.remove("show");
-                }
-            });
-        });
-
-        const container = document.querySelectorAll(".hola");
-        container.forEach((el) => observer.observe(el));
-    </script>
 </div>
+
+<style>
+    #p1 {
+        animation: scaleAnim 1s ease-in-out;
+    }
+
+    #p2 {
+        animation: scaleAnim 2s ease-in-out;
+    }
+
+    #p3 {
+        animation: scaleAnim 3s ease-in-out;
+    }
+
+    #p4 {
+        animation: scaleAnim 4s ease-in-out;
+    }
+
+    @keyframes scaleAnim {
+        from {
+            transform: translateX(-2000px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+</style>

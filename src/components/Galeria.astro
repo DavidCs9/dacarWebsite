@@ -1,42 +1,41 @@
 <div id="galeria" class="pt-24 p-8">
-    <h1 class="text-center text-5xl lg:pt-10 font-bold">Galeria</h1>
-    <div class="flex flex-wrap items-center justify-center lg:pt-30 pt-10">
-        <img
-            src="https://scontent.fcuu2-1.fna.fbcdn.net/v/t39.30808-6/334277591_757020875739947_5842200007117459568_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHNgLJCuu_qUioeGuasBXGg_rz6SFSH1Vv-vPpIVIfVWyWOcGSqsS0MNirMIOBkKLWPb-NoZylAC6oWNA3IkKfF&_nc_ohc=FO1oe57CY-4AX_J627R&_nc_ht=scontent.fcuu2-1.fna&oh=00_AfDS7X46rqFW6QXyoE3ctp9fnquBZHEQaHwQfqsecpdyYw&oe=64057C5D"
-            alt="cuadro 1"
-            class="rounded-md pb-8 lg:w-1/4 lg:pr-8"
-        />
-        <img
-            src="https://scontent.fcuu2-1.fna.fbcdn.net/v/t39.30808-6/334145239_1169068180477524_3989700159678396059_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeG6F-zOhu8O9P4txNlvl4kpFkYoVmwSAtEWRihWbBIC0W2VWVUwufWckxiwQmeKpXRnshwuW2WeULVUfycpUrQ9&_nc_ohc=x-5lNRvF2HAAX8QyI8p&_nc_ht=scontent.fcuu2-1.fna&oh=00_AfDNYvAYsvkA7yLEvI1DspB-Psf-gH2eUcfsjGhuTeftNg&oe=6404A7CE"
-            alt="cuadro 2"
-            class="rounded-md pb-8 lg:w-1/4 lg:pr-8"
-        />
-        <img
-            src="https://scontent.fcuu2-1.fna.fbcdn.net/v/t39.30808-6/334117921_2516554155309986_8088608349854108047_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFpe8LbYrKkUehNdDVPDT34qJtUV1Xvjv-om1RXVe-O_zussIImQ7a1EmexV3eDZCIg-jViz4-VTRmwknMB_RYJ&_nc_ohc=8sXf-wOHLXgAX9F6w0O&_nc_ht=scontent.fcuu2-1.fna&oh=00_AfC26Nra5Y3rCiPcMUw34olWg0fHU-7rk638Qr-D_XuI_w&oe=6405FFE2"
-            alt="cuadro 3"
-            class="rounded-md pb-8 lg:w-1/4 lg:pr-8"
-        />
+    <h1 class="text-center text-6xl lg:pt-10 font-bold">Galeria</h1>
+    <div class="grid lg:grid-cols-3 lg:grid-rows-3 pt-6">
+        <img src="/public/rompecabeza.svg" alt="rompecabeza" class="img" />
+        <img src="/public/jordan.svg" alt="jordan" class="img" />
+        <img src="/public/cajon.svg" alt="cajon" class="img" />
+        <img src="/public/doblemarco.svg" alt="doble marco" class="img" />
+        <img src="/public/titulo.svg" alt="titulo" class="img" />
+        <img src="/public/marialuisa.svg" alt="marialuisa" class="img" />
+        <img src="/public/rustico.svg" alt="rustico" class="img" />
+        <img src="/public/cuadro-ancho.svg" alt="cuadro ancho" class="img" />
+        <img src="/public/magic.svg" alt="magic johnson" class="img" />
     </div>
 </div>
 
 <style>
     body {
-        background: #232526;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #414345, #232526);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #414345, #232526);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-color: #3d3d3d;
         color: white;
 
         font-family: "Roboto", sans-serif;
     }
 
-    img {
-        transition: transform, 1s;
+    .img {
+        transition: transform 0.6s;
+        animation: scaleAnim 1s ease-in-out 1;
     }
 
-    img:hover {
-        transform: scale(1.07);
+    .img:hover {
+        transform: scale(1.1);
+    }
+
+    @keyframes scaleAnim {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
     }
 </style>
