@@ -1,14 +1,11 @@
----
-import { Image } from "@astrojs/image/components";
-const localImage = "/src/images/rompecabeza.svg";
-const localAlt = "rompecabeza";
----
-
 <div id="galeria" class="pt-24 p-8">
     <h1 class="text-center text-6xl lg:pt-10 font-bold">Galeria</h1>
     <div class="grid lg:grid-cols-3 lg:grid-rows-3 pt-6">
-        <Image src={localImage} alt={localAlt} width={400} height={400} />
-        <img src="/src/images/rompecabeza.svg" alt="rompecabeza" class="img" />
+        <img
+            src="../src/images/rompecabeza.svg"
+            alt="rompecabeza"
+            class="img"
+        />
         <img src="/src/images/jordan.svg" alt="jordan" class="img" />
         <img src="/src/images/cajon.svg" alt="cajon" class="img" />
         <img src="/src/images/doblemarco.svg" alt="doble marco" class="img" />
