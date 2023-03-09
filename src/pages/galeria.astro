@@ -8,7 +8,24 @@ import Footer from "../components/Footer.astro";
 <Layout title="DACAR-GALERIA">
     <main>
         <Nav />
+        <div class="loader"></div>
         <Galeria />
         <Footer />
     </main>
 </Layout>
+
+<style>
+    .loader {
+        background: #1c1d1d url(/images/loading.gif) no-repeat center;
+        height: 100vh;
+        width: 100%;
+    }
+</style>
+
+<script>
+    const loader = document.querySelector(".loader");
+
+    setTimeout(() => {
+        loader.classList.remove("loader");
+    }, 2000);
+</script>
