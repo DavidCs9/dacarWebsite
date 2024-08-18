@@ -1,14 +1,15 @@
+---
+import { Image } from "astro:assets";
+import DacarImage from "../images/dacar.webp";
+---
+
 <footer class="p-4 md:p-8 lg:p-10 bg-gray-800 lg:mt-10">
   <div class="mx-auto max-w-screen-xl text-center">
     <a
       href="#"
       class="flex justify-center items-center text-2xl font-semibold text-white"
     >
-      <img
-        src="/images/dacar.webp"
-        alt="dacar logo"
-        class="w-6 rounded-md mr-2"
-      />
+      <Image src={DacarImage} alt="Dacar" class="w-12 h-12 mr-2" />
       Dacar
     </a>
     <p class="my-6 text-gray-400">

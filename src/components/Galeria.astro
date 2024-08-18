@@ -1,41 +1,94 @@
+---
+import { Image } from "astro:assets";
+import Rompecabeza from "../images/rompecabeza.webp";
+import Jordan from "../images/jordan.webp";
+import Cajon from "../images/cajon.webp";
+import DobleMarco from "../images/doblemarco.webp";
+import Titulo from "../images/titulo.webp";
+import MariaLuisa from "../images/marialuisa.webp";
+import Rustico from "../images/rustico.webp";
+import CuadroAncho from "../images/cuadro-ancho.webp";
+import Magic from "../images/magic.webp";
+
+const Galery = [
+  {
+    title: "Rompecabeza",
+    img: Rompecabeza,
+  },
+  {
+    title: "Jordan",
+    img: Jordan,
+  },
+  {
+    title: "Cajon",
+    img: Cajon,
+  },
+  {
+    title: "Doble Marco",
+    img: DobleMarco,
+  },
+  {
+    title: "Titulo",
+    img: Titulo,
+  },
+  {
+    title: "Maria Luisa",
+    img: MariaLuisa,
+  },
+  {
+    title: "Rustico",
+    img: Rustico,
+  },
+  {
+    title: "Cuadro Ancho",
+    img: CuadroAncho,
+  },
+  {
+    title: "Magic",
+    img: Magic,
+  },
+];
+---
+
 <section id="galeria" class="pt-24 p-8 bg-gray-900">
-    <h1 class="text-center text-4xl lg:pt-10 font-bold">Galeria</h1>
-    <div class="grid lg:grid-cols-3 lg:grid-rows-3 pt-6">
-        <img src="/images/rompecabeza.webp" alt="rompecabeza" class="img" />
-        <img src="/images/jordan.webp" alt="jordan" class="img" />
-        <img src="/images/cajon.webp" alt="cajon" class="img" />
-        <img src="/images/doblemarco.webp" alt="doble marco" class="img" />
-        <img src="/images/titulo.webp" alt="titulo" class="img" />
-        <img src="/images/marialuisa.webp" alt="marialuisa" class="img" />
-        <img src="/images/rustico.webp" alt="rustico" class="img" />
-        <img src="/images/cuadro-ancho.webp" alt="cuadro ancho" class="img" />
-        <img src="/images/magic.webp" alt="magic johnson" class="img" />
-    </div>
+  <h1 class="text-center text-4xl lg:pt-10 font-bold">Galeria</h1>
+  <div class="grid lg:grid-cols-3 lg:grid-rows-3 pt-6">
+    {
+      Galery.map((imagen, index) => (
+        <Image
+          id={`g${index + 1}`}
+          src={imagen.img}
+          alt={imagen.title}
+          class="rounded-lg img"
+        />
+      ))
+    }
+  </div>
 </section>
 
 <style>
-    body {
-        /* background-color: #3d3d3d; */
-        color: white;
+  body {
+    /* background-color: #3d3d3d; */
+    color: white;
 
-        font-family: "Roboto", sans-serif;
-    }
+    font-family: "Roboto", sans-serif;
+  }
 
-    .img {
-        transition: transform 0.6s;
-        animation: scaleAnim 1s ease-in-out 1;
-    }
+  .img {
+    transition: transform 0.6s;
+    animation: scaleAnim 1s ease-in-out 1;
+  }
 
-    .img:hover {
-        transform: scale(1.1);
-    }
+  .img:hover {
+    transform: scale(1.1);
+  }
 
-    @keyframes scaleAnim {
-        from {
-            transform: scale(0);
-        }
-        to {
-            transform: scale(1);
-        }
+  @keyframes scaleAnim {
+    from {
+      transform: scale(0);
     }
+    to {
+      transform: scale(1);
+    }
+  }
 </style>
